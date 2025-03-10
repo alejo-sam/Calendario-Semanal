@@ -1,0 +1,91 @@
+:root {
+    --bg-color: #e8f5e9;
+    --container-bg: #ffffff;
+    --text-color: #000;
+    --table-border: #c8e6c9;
+    --header-bg: #81c784;
+    --event-bg: #a5d6a7;
+    --button-bg: #4caf50;
+    --button-hover: #388e3c;
+}
+
+body.dark-mode {
+    --bg-color: #2e2e2e;
+    --container-bg: #424242;
+    --text-color: #ffffff;
+    --table-border: #616161;
+    --header-bg: #388e3c;
+    --event-bg: #4caf50;
+    --button-bg: #66bb6a;
+    --button-hover: #43a047;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    background: var(--container-bg);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid var(--table-border);
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: var(--header-bg);
+    color: white;
+}
+
+.event {
+    background-color: var(--event-bg);
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.toggle-button {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--button-bg);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.toggle-button:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    th, td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
